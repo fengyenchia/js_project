@@ -31,6 +31,7 @@ npm start
 
 ```
 FINAL_PROJECT/
+<<<<<<< HEAD:read.md
 │
 ├─ README.md
 ├─ bin/
@@ -63,3 +64,40 @@ FINAL_PROJECT/
 ├─ package.json
 └─ package-lock.json
 ```
+=======
+|
+|-- README.md
+|
+|-- bin/
+|-- node_modules/
+|-- public/
+|   |-- assets/
+|   |-- javascripts/
+|   |   |-- chapters/
+|   |   |   |-- chapter1.js
+|   |   |   |-- chapter2.js
+|   |   |   |-- chapter3.js
+|   |   |   |-- chapter4.js
+|   |   |   |-- chapter5.js
+|   |   |   |-- chapter6.js
+|   |   |   |-- chapter7.js
+|   |   |
+|   |   |-- overallControl.js
+|   |   |-- p5.min.js
+|   |   |-- p5.play.js
+|   |   |-- p5.sound.js
+|   |   |-- p5.sound.min.js
+|   |   |-- shape5.js
+|   |   |-- sketch.js
+|   |
+|   |-- stylesheets/
+|   |-- template/
+|   |-- 實用工具/
+|   |-- index.html
+|
+|-- routes/
+|-- .gitignore
+|-- app.js           
+|-- package.json     
+|-- package-lock.json
+>>>>>>> d4c39573b35c357f949d856593b87437a59512e8:READ.md
