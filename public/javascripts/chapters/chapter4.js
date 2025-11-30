@@ -18,7 +18,7 @@ class Chapter4 {
         // goToChapter(Y); // <-- 把 Y 換成目標章節的數字
         
         // 當玩家做出選擇時，記得記錄到 gameState 中：
-        // gameState.playerChoices.instagram = 'reply';
+        // gameState.playerChoices.instagram = 'reply'; // (以chapter2為例)
     }
 
     keyPressed() {

@@ -4,29 +4,47 @@
  * -----------------------------------------
  * 這個檔案是專案的「導演」。
  * 它負責 p5.js 的初始化，並像導演一樣，
- * 根據 gameManager 中的「劇本」，決定現在該讓哪個「演員」(Chapter) 上場表演。
+ * 根據 overallControl 中的「劇本」，決定現在該讓哪個「演員」(Chapter) 上場表演。
  * =========================================
  */
 
 // 這個變數將用來管理所有 Chapter 物件
 let chapterManager;
 
-// 這裡是 p5.js 的 preload 函式，專門用來在遊戲開始前載入所有資源
-function preload() {
-    // 範例： assets.bg_cafe = loadImage('assets/images/cafe_background.png');
+// 建立一個物件來存放所有載入的資源，方便管理
+const assets = {
+    noteImage1: null,
+    noteImage2: null,
+    noteImage3: null,
+};
+
+// 用來在遊戲開始前載入所有資源
+function preload() {   
+    assets.noteImage1 = loadImage('assets/images/ch1/note_1.png');
+    assets.noteImage2 = loadImage('assets/images/ch1/note_2.png');
+    assets.noteImage3 = loadImage('assets/images/ch1/note_3.png');
     // 範例： assets.sfx_door = loadSound('assets/sounds/door_open.mp3');
-    // 請在這裡預先載入你所有的圖片和音效
 }
 
 
 function setup() {
     createCanvas(1440, 1024); 
-    console.log("p5.js 導演 (sketch.js) 已啟動");
+    console.log("sketch.js 已啟動");
+
+    // 將載入好的圖片資源打包成一個陣列
+    // chapter1
+    const noteImages = [assets.noteImage1, assets.noteImage2, assets.noteImage3];
+    // chapter2
+    // chapter3
+    // chapter4
+    // chapter5
+    // chapter6
+    // chapter7
 
     // 初始化所有 Chapter，並把它們儲存在 chapterManager 中
     // key (1, 2, 3...) 對應 gameState.currentChapter 的值
     chapterManager = {
-        1: new Chapter1(), // "new Chapter1()" 來自於你寫的 chapter1.js
+        1: new Chapter1(noteImages),
         2: new Chapter2(),
         3: new Chapter3(),
         4: new Chapter4(),
