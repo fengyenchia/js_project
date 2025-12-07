@@ -1,7 +1,5 @@
 /*
  * =========================================
- * sketch.js
- * -----------------------------------------
  * 這個檔案是專案的「導演」。
  * 它負責 p5.js 的初始化，並像導演一樣，
  * 根據 overallControl 中的「劇本」，決定現在該讓哪個「演員」(Chapter) 上場表演。
@@ -33,7 +31,7 @@ function setup() {
 
     // 將載入好的圖片資源打包成一個陣列
     // chapter1
-    const noteImages = [assets.noteImage1, assets.noteImage2, assets.noteImage3];
+    let noteImages = [assets.noteImage1, assets.noteImage2, assets.noteImage3];
     // chapter2
     // chapter3
     // chapter4
@@ -70,8 +68,8 @@ function draw() {
     // 3. 如果找到了，就執行該章節自己的 draw() 函式，讓它畫出自己該有的畫面
     if (activeChapter) {
         activeChapter.draw();
-    } else {
-        // 如果找不到對應的章節，顯示錯誤訊息，方便除錯
+    }
+    else {
         fill(255);
         textAlign(CENTER);
         text(`錯誤：找不到 Chapter ${currentChapterNumber}`, width / 2, height / 2);
