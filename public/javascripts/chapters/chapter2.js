@@ -11,7 +11,6 @@ class Chapter2 {
     }
 
     draw() {
-        
         background(200, 220, 255);
         fill(0);
         textAlign(CENTER, CENTER);
